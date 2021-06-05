@@ -37,7 +37,6 @@ class Accesorios(models.Model):
     def __str__(self):
         return self.nombre
 
-
 ##Fabricantes 
 class fabricantes(models.Model):
     nombre = models.CharField(max_length=30)
@@ -62,7 +61,6 @@ class Compra(models.Model):
     def __str__(self):
         return self.nombre
 
-
 ##Clientes
 class Cliente(models.Model):
     rut = models.IntegerField(null=False)
@@ -73,7 +71,6 @@ class Cliente(models.Model):
     contacto = models.CharField(max_length=30)
     email = models.EmailField(max_length=50)
     
-
     def __str__(self):
         return self.rut
 
@@ -94,7 +91,6 @@ class Tiendas(models.Model):
     def __str__(self):
         return self.direccion
 
-
 ##Venta
 class Venta(models.Model):
     nombre = models.CharField(max_length=30)
@@ -102,8 +98,6 @@ class Venta(models.Model):
 
     def __str__(self):
         return self.nombre
-
-
 
 ##Region
 class Region(models.Model):
@@ -131,7 +125,6 @@ class Sucursal(models.Model):
     def __str__(self):
         return self.direccion
 
-
 ##Pais
 class Pais(models.Model):
     cod_Comuna = models.ForeignKey(Cliente,on_delete=models.CASCADE,default=0)
@@ -140,7 +133,6 @@ class Pais(models.Model):
     
     def __str__(self):
         return self.direccion
-
 
 ##Trabajador
 class Trabajador(models.Model):
@@ -152,6 +144,5 @@ class Trabajador(models.Model):
     contacto = models.CharField(max_length=30)
     email = models.EmailField(max_length=50)
     
-
     def __str__(self):
         return self.rut
