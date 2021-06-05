@@ -2,11 +2,12 @@ from django.db import models
 
 # Create your models here.
 
-##Base de datos Distribuuidora
+
+##Base de datos Distribuidora
 
 ##Empleados
 class Empleado(models.Model):
-    rut_id = models.AutoField(primary_key=True)  
+    rut_id = models.CharField(max_length=30)  
     sueldo = models.CharField(max_length=200, null=False)
     
     def __str__(self):
@@ -45,7 +46,7 @@ class fabricantes(models.Model):
     def __str__(self):
         return self.nombre
 
-##Marcas
+##Marca
 class Marca(models.Model):
     nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=100)
@@ -85,8 +86,8 @@ class Artistas(models.Model):
         return self.nombre
 
 ##Distribuidoras tiendas
-class tiendas(models.Model):
-    cod_tiendas = models.ForeignKey(Persona,on_delete=models.CASCADE,default=0)
+class Tiendas(models.Model):
+    cod_tiendas = models.ForeignKey(Cliente,on_delete=models.CASCADE,default=0)
     cod_sucursal = models.CharField(max_length=10)
     direccion = models.TextField(default=0)
     
@@ -121,9 +122,9 @@ class Comuna(models.Model):
         return self.nombre
 
 
-##Ducursal
+##Sucursal
 class Sucursal(models.Model):
-    cod_comuna = models.ForeignKey(Persona,on_delete=models.CASCADE,default=0)
+    cod_comuna = models.ForeignKey(Cliente,on_delete=models.CASCADE,default=0)
     cod_sucursal = models.CharField(max_length=10)
     direccion = models.TextField(default=0)
     
@@ -132,8 +133,8 @@ class Sucursal(models.Model):
 
 
 ##Pais
-class Comuna(models.Model):
-    cod_Comuna = models.ForeignKey(Persona,on_delete=models.CASCADE,default=0)
+class Pais(models.Model):
+    cod_Comuna = models.ForeignKey(Cliente,on_delete=models.CASCADE,default=0)
     cod_sucursal = models.CharField(max_length=10)
     direccion = models.TextField(default=0)
     
