@@ -1,7 +1,5 @@
 from django.db import models
 
-# Create your models here.
-
 ##Base de datos Distribuuidora
 
 ##Empleados
@@ -36,7 +34,6 @@ class Accesorios(models.Model):
     def __str__(self):
         return self.nombre
 
-
 ##Fabricantes 
 class fabricantes(models.Model):
     nombre = models.CharField(max_length=30)
@@ -61,7 +58,6 @@ class Compra(models.Model):
     def __str__(self):
         return self.nombre
 
-
 ##Clientes
 class Cliente(models.Model):
     rut = models.IntegerField(null=False)
@@ -72,7 +68,6 @@ class Cliente(models.Model):
     contacto = models.CharField(max_length=30)
     email = models.EmailField(max_length=50)
     
-
     def __str__(self):
         return self.rut
 
@@ -93,7 +88,6 @@ class tiendas(models.Model):
     def __str__(self):
         return self.direccion
 
-
 ##Venta
 class Venta(models.Model):
     nombre = models.CharField(max_length=30)
@@ -101,8 +95,6 @@ class Venta(models.Model):
 
     def __str__(self):
         return self.nombre
-
-
 
 ##Region
 class Region(models.Model):
@@ -120,16 +112,14 @@ class Comuna(models.Model):
     def __str__(self):
         return self.nombre
 
-
 ##Ducursal
 class Sucursal(models.Model):
-    cod_comuna = models.ForeignKey(Persona,on_delete=models.CASCADE,default=0)
+    cod_comuna = models.ForeignKey(Cliente,on_delete=models.CASCADE,default=0)
     cod_sucursal = models.CharField(max_length=10)
     direccion = models.TextField(default=0)
     
     def __str__(self):
         return self.direccion
-
 
 ##Pais
 class Comuna(models.Model):
@@ -139,7 +129,6 @@ class Comuna(models.Model):
     
     def __str__(self):
         return self.direccion
-
 
 ##Trabajador
 class Trabajador(models.Model):
@@ -151,6 +140,5 @@ class Trabajador(models.Model):
     contacto = models.CharField(max_length=30)
     email = models.EmailField(max_length=50)
     
-
     def __str__(self):
         return self.rut
