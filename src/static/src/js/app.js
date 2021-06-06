@@ -12,10 +12,10 @@ $(document).ready(function($) {
 simpleCart({
   cartColumns: [
       { view:'image' , attr:'image', label: "Imagen"}, //obtiene la imagen
-      { attr: "name", label: "Nombre"}, //obtiene el nombre
-      { view: "currency", attr: "price", label: "Precio"},//obtiene el precio
+      { attr: "name", label: "Name"}, //obtiene el nombre
+      { view: "currency", attr: "price", label: "Price"},//obtiene el precio
       { view: "decrement", label: "-"}, //Resta el producto
-      { attr: "quantity", label: "Cantidad"}, //obtiene la cantidad del producto
+      { attr: "quantity", label: "Qty"}, //obtiene la cantidad del producto
       { view: "increment", label: "+"}, //Suma el producto
       { view: "currency", attr: "total", label: "SubTotal" },// Obtiene el precio total del producto
       { view: "remove", text: "Quitar", label: false} //Quita o remueve el producto
@@ -25,7 +25,7 @@ simpleCart({
 
   checkout: { 
       type: "PayPal" , //Pago a través de PayPal
-      email: "cafeteriadjango@gmail.com" //tu correo válido
+      email: "tu-correo@dominio.com" //tu correo válido
   }
 
 });
