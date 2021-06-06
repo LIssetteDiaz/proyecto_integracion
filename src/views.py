@@ -6,6 +6,7 @@ from .models import Instrumentos
 def Inicio(request):
     return render(request, "src/inicio.html")
 
+
 def GaleriaInstrumentos(request):
 
     instrumentos = Instrumentos.objects.all()
@@ -14,3 +15,9 @@ def GaleriaInstrumentos(request):
         'instrumentos':instrumentos
     }
     return render(request, "src/instrumentos.html",context)
+
+
+def carrito(request):
+    return render(request, "src/carrito.html")
+
+

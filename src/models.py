@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 ##Base de datos Distribuidora
 
-##Empleados
+##Empleado
 class Empleado(models.Model):
     rut_id = models.CharField(max_length=30)  
     sueldo = models.CharField(max_length=200, null=False)
