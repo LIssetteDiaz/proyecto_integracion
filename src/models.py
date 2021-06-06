@@ -1,8 +1,6 @@
 from django.db import models
 
 # Create your models here.
-
-
 ##Base de datos Distribuidora
 
 ##Empleados
@@ -25,6 +23,7 @@ class GruposMusicales(models.Model):
 class Instrumentos(models.Model):
     nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=100)
+    imagen = models.ImageField(default=None,upload_to="instrumentos")
 
     def __str__(self):
         return self.nombre

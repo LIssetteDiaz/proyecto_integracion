@@ -1,0 +1,7 @@
+.caja{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-around;
+	justify-content: space-around;
+	background-color: rgb(194, 196, 197);
+}

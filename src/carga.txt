@@ -1,0 +1,83 @@
+crear1 = Instrumentos.objects.create(
+        nombre = "Acordeon",
+        descripcion = "Profesional avanzado, color negro, marca Roland",
+        imagen = "/acordeon.jpg"
+    )
+    crear1.save()
+
+    crear2 = Instrumentos.objects.create(
+        nombre = "Arpa",
+        descripcion = "profesional intermedio, color cafe dorado",
+        imagen = "/arpa.jpg"
+    )
+    crear2.save()
+
+    crear3 = Instrumentos.objects.create(
+        nombre = "Bateria",
+        descripcion = "principante avanzado, color negro, marca Audiotek",
+        imagen = "/bateria.jpg"
+    )
+    crear3.save()
+
+    crear4 = Instrumentos.objects.create(
+        nombre = "Bongos",
+        descripcion = "principiante avanzado, color cafe negro, marca Tumbao",
+        imagen = "/bongos.jpg"
+    )
+    crear4.save()
+
+    crear5 = Instrumentos.objects.create(
+        nombre = "Flauta Traversa",
+        descripcion = "profesional intermedio, color negro plata",
+        imagen = "/flauta_traversa.jpg"
+    )
+    crear5.save()
+
+    crear6 = Instrumentos.objects.create(
+        nombre = "Guitarra Acustica",
+        descripcion = "Principiante intermedio, color negro, marca Mercury",
+        imagen = "/guitarra_acustica.jpg"
+    )
+    crear6.save()
+
+    crear7 = Instrumentos.objects.create(
+        nombre = "Guitarra Electrica",
+        descripcion = "Profesional, color cafe negro, marca Gibson",
+        imagen = "/guitarra_electrica.png"
+    )
+    crear7.save()
+
+    crear8 = Instrumentos.objects.create(
+        nombre = "Piano Electrico",
+        descripcion = "Principiante avanzado, color negro, marca Bontempi",
+        imagen = "/piano_electrico.jpg"
+    )
+    crear8.save()
+
+    crear9 = Instrumentos.objects.create(
+        nombre = "Piano",
+        descripcion = "Profesional avanzado, color negro, marca Yamaha",
+        imagen = "/piano.jpg"
+    )
+    crear9.save()
+
+    crear10 = Instrumentos.objects.create(
+        nombre = "Saxofon",
+        descripcion = "Profesional Intermedio, color dorado, marca L&K",
+        imagen = "/saxofon.jpg"
+    )
+    crear10.save()
+
+    crear11 = Instrumentos.objects.create(
+        nombre = "Trompeta",
+        descripcion = "Principiante avanzado, color dorado, marca Andoer",
+        imagen = "/trompeta.jpg"
+    )
+    crear11.save()
+
+    crear12 = Instrumentos.objects.create(
+        nombre = "Violin",
+        descripcion = "profesional basico, color cafe negro, marca Cremona",
+        imagen = "/violin.jpg"
+    )
+    crear12.save()

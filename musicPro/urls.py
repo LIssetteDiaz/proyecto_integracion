@@ -20,4 +20,5 @@ from src import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.Inicio, name='Inicio'),
+    path('instrumentos/', views.GaleriaInstrumentos, name='instrumentos'),
 ]
