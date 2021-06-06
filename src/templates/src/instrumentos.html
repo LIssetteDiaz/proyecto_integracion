@@ -11,7 +11,10 @@
                 <img src="{% static 'src/img/instrumentos/'%}{{ inst.imagen }}" alt="{{inst.nombre}}" class="img-fluid" width="80%" style="margin:10px auto;display:block;">
                 <h5 class="card-header">{{ inst.nombre }}</h5>
                 <div class="card-body text-dark">
-                <p class="card-text">{{ inst.descripcion }}</p>
+                    <p class="card-text">{{ inst.descripcion }}</p>
+                </div>
+                <div class="card-footer text-dark">
+                    <p class="card-text">{{ inst.precio }}</p>
                 </div>
             </div>
         {% endfor %}

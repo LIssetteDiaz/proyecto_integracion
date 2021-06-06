@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Instrumentos
+from .models import Producto
 
 # Create your views here.
 
@@ -9,7 +9,7 @@ def Inicio(request):
 
 def GaleriaInstrumentos(request):
 
-    instrumentos = Instrumentos.objects.all()
+    instrumentos = Producto.objects.all()
     
     context ={
         'instrumentos':instrumentos
