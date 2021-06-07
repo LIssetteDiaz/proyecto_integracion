@@ -1,8 +1,13 @@
 from rest_framework import serializers
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Empleado, GruposMusicales
+from .models import Categoria
 
+class CategoriaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Categoria
+        fields = '__all__'
+   
 
 ''' class PersonaSerializer(serializers.Serializer):
     rut = serializers.IntegerField(read_only=True)
@@ -42,14 +47,14 @@ from .models import Empleado, GruposMusicales
 
 
 
-class EmpleadoSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Empleado
-        fields = ('rut_id', 'sueldo')
+# class EmpleadoSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Empleado
+#         fields = ('rut_id', 'sueldo')
         
 
 
-class PostresSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = GruposMusicales
-        fields = ('nombre', 'descripcion')
+# class PostresSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = GruposMusicales
+#         fields = ('nombre', 'descripcion')
