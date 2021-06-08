@@ -52,7 +52,7 @@ class Producto(models.Model):
     nombre = models.CharField(max_length=30)
     descripcion = models.CharField(max_length=100)
     precio = models.IntegerField(null=False)
-    imagen = models.ImageField(default=None,upload_to="instrumentos")
+    imagen = models.ImageField(default=None,upload_to="instrumentos", blank=True, null=True)
     tipo_producto = models.ForeignKey(Tipo_producto,on_delete=models.CASCADE,default=0)
     marca = models.ForeignKey(Marca,on_delete=models.CASCADE,default=0)
 

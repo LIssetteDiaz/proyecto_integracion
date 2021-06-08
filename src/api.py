@@ -1,5 +1,5 @@
 from rest_framework.response import Response
-from .serializers import CategoriaSerializer, EmpleadoSerializer, MarcaSerializer, ProductoSerializer
+from .serializers import CategoriaSerializer, EmpleadoSerializer, MarcaSerializer, ProductoSerializer, TipoProductoSerializer
 from rest_framework.views import APIView
 from rest_framework import status
 from .models import Categoria, Empleado, Tipo_producto, Marca, Producto
@@ -108,7 +108,7 @@ def empleado_detail_api_view_filterForName(request, name=None):
 
     if request.method == 'GET':
         serializer = Empleado.objects.filter(nombre = name)
-        serializer = EmpleadoSerializer(serializer)
+        serializer = EmpleadoSerializer(serializer, many=True)
         return Response(serializer.data)
 
 @api_view(['GET'])
@@ -116,7 +116,7 @@ def empleado_detail_api_view_filterForEmail(request, email=None):
 
     if request.method == 'GET':
         serializer = Empleado.objects.filter(email = email)
-        serializer = EmpleadoSerializer(serializer)
+        serializer = EmpleadoSerializer(serializer, many=True)
         return Response(serializer.data)
 
 ##*********************Tipos producto***********************++
@@ -239,7 +239,7 @@ def producto_detail_api_view_filterForPrice(request, price=None):
 
     if request.method == 'GET':
         serializer = Producto.objects.filter(precio = price)
-        serializer = ProductoSerializer(serializer)
+        serializer = ProductoSerializer(serializer, many=True)
         return Response(serializer.data)
 
 
@@ -248,7 +248,7 @@ def producto_detail_api_view_filterForName(request, name=None):
 
     if request.method == 'GET':
         serializer = Producto.objects.filter(nombre = name)
-        serializer = ProductoSerializer(serializer)
+        serializer = ProductoSerializer(serializer, many=True)
         return Response(serializer.data)
          
         
