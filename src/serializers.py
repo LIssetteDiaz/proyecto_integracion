@@ -1,13 +1,33 @@
 from rest_framework import serializers
 from rest_framework.response import Response
 from rest_framework import status
-from .models import Categoria
+from .models import Categoria, Empleado, Tipo_producto, Marca, Producto
 
 class CategoriaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Categoria
         fields = '__all__'
+
+class EmpleadoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Empleado
+        fields = '__all__'
    
+class TipoProductoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tipo_producto
+        fields = '__all__'
+
+class MarcaSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Marca
+        fields = '__all__'
+
+
+class ProductoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Producto
+        fields = '__all__'
 
 ''' class PersonaSerializer(serializers.Serializer):
     rut = serializers.IntegerField(read_only=True)
